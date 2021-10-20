@@ -13,8 +13,7 @@ body {
 
 .App h3 {
   color: #82bcde;
-
-  padding: 0.75em;
+  padding: 0.75em 0.75em 0em 0;
 
 }
 
