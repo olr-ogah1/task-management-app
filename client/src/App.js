@@ -7,7 +7,7 @@ import notepad from "./notepad.png";
 function App() {
   return (
     <div className="App container">
-      <h1>Organise everything with this Task Management App</h1>
+      <h1>Organise everything with this simple Task Manager</h1>
       <img src={notepad} alt="A notepad and pen"/>
       <h3 >Add a task:</h3>
       <div>
