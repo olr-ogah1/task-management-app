@@ -8,6 +8,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           yarn-version: '1.22.15'
+
+      - run: cd task-management-app/task-management-app
       - run: yarn install
-      - run: cd server/
       - run: yarn test
