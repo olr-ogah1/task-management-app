@@ -21,7 +21,7 @@ class TasksTable extends Component {
         <tr key = { task.id }>
           <td>{ task.id }</td>
           <td>{ task.title }</td>
-          <td>{ task.description }</td>
+          <td>{task.description}</td>
           <td>
             <input
               id="completed"
@@ -31,6 +31,14 @@ class TasksTable extends Component {
               disabled={true}
               defaultChecked={ task.completed }
             />
+          </td>
+          <td>
+            <button id="edit" className="btn btn-primary list-button" onClick={this.handleClick}>
+              Edit
+            </button>
+            <button id="delete" className="btn btn-primary list-button" onClick={this.handleClick}>
+              Delete
+            </button>
           </td>
         </tr>
       )})
@@ -42,9 +50,10 @@ class TasksTable extends Component {
           <th scope="col">Title</th>
           <th scope="col">Description</th>
           <th scope="col">Completed</th>
+          <th scope="col">Options</th>
         </tr>
         </thead>
-        <tbody>{ items }</tbody>
+        <tbody>{ items } </tbody>
       </table>
     )
   }

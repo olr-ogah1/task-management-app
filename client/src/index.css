@@ -2,6 +2,7 @@ body {
   font-family: 'Raleway', helvetica;
 }
 
+/* HEADERS */
 .App h1 {
   color:#b22e2a;
 
@@ -17,6 +18,7 @@ body {
 
 }
 
+/* IMAGES */
 .App img {
   display: block;
   margin-left: auto;
@@ -24,7 +26,12 @@ body {
   width: 20%;
 }
 
-#submit {
+/* BUTTONS */
+.btn{
   background-color: #82bcde;
   border: #82bcde;
+}
+
+#edit {
+  margin-right: 10px;
 }

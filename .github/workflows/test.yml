@@ -9,6 +9,6 @@ jobs:
         with:
           yarn-version: '1.22.15'
 
-      - run: cd task-management-app
+      - run: cd server/
       - run: yarn install
       - run: yarn test
