@@ -9,5 +9,5 @@ jobs:
         with:
           yarn-version: '1.22.15'
       - run: yarn install
-      - run: cd ./client/
+      - run: cd server/
       - run: yarn test
