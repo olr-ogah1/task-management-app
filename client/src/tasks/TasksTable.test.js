@@ -15,12 +15,8 @@ describe('The tasks table', () => {
     expect(component.find('table').length).toEqual(1);
   })
 
-  it('Should render a caption element', () => {
-    expect(component.find('caption').length).toEqual(1);
-  })
-
-  it('Should render a header element with four columns', () => {
-    expect(component.find('th').length).toEqual(4);
+  it('Should render a header element with five columns', () => {
+    expect(component.find('th').length).toEqual(5);
   })
 
   it('Should render titles in the columns', () => {
@@ -29,6 +25,14 @@ describe('The tasks table', () => {
     expect(component.find('th').at(2).text()).toEqual('Description');
     expect(component.find('th').at(3).text()).toEqual('Completed');
   })
+
+  it('Should render an edit button', () => {
+    expect(component.find('button').at(0).text()).toEqual('Edit');
+  });
+
+  it('Should render an delete button', () => {
+    expect(component.find('button').at(1).text()).toEqual('Delete');
+  });
 
   it('Should use Axios to load a list of tasks', () => {
     const getSpy = jest.spyOn(axios, 'get');
@@ -45,9 +49,11 @@ describe('The tasks table', () => {
     expect(component.find('td').at(1).text()).toEqual('Schedule Meeting');
     expect(component.find('td').at(2).text()).toEqual('Schedule a 3-amigo session for Monday 11th of October');
     expect(component.find('td').at(3)).toBeDefined();
-    expect(component.find('td').at(4).text()).toEqual('2');
-    expect(component.find('td').at(5).text()).toEqual('Contract tests');
-    expect(component.find('td').at(6).text()).toEqual('Write provider contract tests for the new version of our API');
-    expect(component.find('td').at(7)).toBeDefined();
+    expect(component.find('td').at(4).text()).toEqual('EditDelete');
+    expect(component.find('td').at(5).text()).toEqual('2');
+    expect(component.find('td').at(6).text()).toEqual('Contract tests');
+    expect(component.find('td').at(7).text()).toEqual('Write provider contract tests for the new version of our API');
+    expect(component.find('td').at(8)).toBeDefined();
+    expect(component.find('td').at(9).text()).toEqual('EditDelete');
   })
 })
