@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import TaskForm from "./tasks/TaskForm";
 import TasksTable from "./tasks/TasksTable";
+import TaskTitle from "./tasks/TaskTitle";
 import notepad from "./notepad.png";
 
 function App() {
   return (
     <div className="App container">
-      <h1>Organise everything with this simple Task Manager</h1>
+      <div>
+        <TaskTitle/>
+      </div>
       <img src={notepad} alt="A notepad and pen"/>
       <h3 >Add a task:</h3>
       <div>
